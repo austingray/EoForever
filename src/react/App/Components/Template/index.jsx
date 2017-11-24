@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header';
 import Logo from '../Logo';
 import Menu from '../Menu';
-import ContentBox from '../ContentBox';
+import Content from '../Content';
 
 function Template({ children }) {
   return (
@@ -12,9 +12,9 @@ function Template({ children }) {
         <Logo />
         <Menu />
       </Header>
-      <ContentBox>
+      <Content>
         {children}
-      </ContentBox>
+      </Content>
     </div>
   );
 }

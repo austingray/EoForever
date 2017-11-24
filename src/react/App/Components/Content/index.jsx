@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { $white, $darkGray } from '../../utilities/colors';
 
-function ContentBox({ className, children }) {
+function Content({ className, children }) {
   return (
     <div className={className}>{children}</div>
   );
 }
 
-ContentBox.propTypes = {
+Content.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -17,7 +17,7 @@ ContentBox.propTypes = {
   className: PropTypes.string.isRequired,
 };
 
-export default styled(ContentBox)`
+export default styled(Content)`
   border: 1px solid ${$darkGray};
   width: 1200px;
   height: 600px;
