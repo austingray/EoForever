@@ -10,7 +10,7 @@ export default styled.a`
   color: ${props => props.color ? props.color : $white};
   text-decoration: none;
   opacity: .8;
-  text-transform: uppercase;
+  margin: ${props => props.margin || 'unset'};
   &:hover {
     text-shadow: 2px 2px 8px ${$blue};
     opacity: 1;
