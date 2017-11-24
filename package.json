@@ -1,0 +1,54 @@
+{
+  "name": "react-express-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to jumpstart the creation of React + Express powered websites",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "watch": "yarn run watch:react | yarn run watch:sass",
+    "watch:react": "webpack --watch --progress --colors --display-error-details --config webpack.dev.js",
+    "watch:sass": "node-sass --include-path scss src/scss/style.scss public/build/css/style.css --watch",
+    "build": "npm run build:sass | npm run build:react",
+    "build:react": "webpack -p --config webpack.dev.js",
+    "build:sass": "node-sass --include-path scss src/scss/style.scss public/build/css/style.css",
+    "db:migrate": "knex --knexfile .knex/knexfile.js migrate:latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austingray/react-express-boilerplate.git"
+  },
+  "author": "Austin Gray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austingray/react-express-boilerplate/issues"
+  },
+  "homepage": "https://github.com/austingray/react-express-boilerplate#readme",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "debug": "^3.1.0",
+    "express": "^4.15.4",
+    "knex": "^0.13.0",
+    "node-sass": "^4.7.2",
+    "pg": "^7.3.0",
+    "prop-types": "^15.5.10",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "styled-components": "^2.2.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.3.0",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "webpack": "^3.6.0",
+    "webpack-merge": "^4.1.1"
+  }
+}

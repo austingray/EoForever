@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Node.js
+node_modules/
+
+# Build
+public/build/js/*
+!public/build/js/.keep
+public/build/css/*
+!public/build/css/.keep
