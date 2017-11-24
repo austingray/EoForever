@@ -1,9 +1,11 @@
-# JavaScript Canvas Game
-A boilerplate to jumpstart the creation of React + Express powered websites.
+# Eo Forever
+A browser based online RPG.
 
 ### Prerequisites
 - [Yarn](https://yarnpkg.com/en/)
 - [Docker](https://www.docker.com/community-edition)
+
+The client uses SSR React components and [styled-components](https://github.com/styled-components/styled-components). This project follows the [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react).
 
 ### Development
 - Install dependencies: `yarn`
