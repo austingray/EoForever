@@ -27,4 +27,5 @@ export default styled(Content)`
   right: 0;
   left: 0;
   margin: auto;
+  overflow-y: auto;
 `;

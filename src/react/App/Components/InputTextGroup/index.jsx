@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Label from '../Label';
 import InputText from '../InputText';
+import ErrorText from '../ErrorText';
 
 function InputGroup({
   className,
@@ -13,6 +14,7 @@ function InputGroup({
   validates,
   updateInput,
   type,
+  errorText,
 }) {
   return (
     <div className={`${className} ${validates ? '' : 'invalid'}`}>
@@ -24,12 +26,18 @@ function InputGroup({
         name={name}
         onChange={e => updateInput(e, name)}
       />
+      {
+        !validates && (
+          <ErrorText>{errorText}</ErrorText>
+        )
+      }
     </div>
   );
 }
 
 InputGroup.defaultProps = {
   type: 'text',
+  errorText: 'Please provide a correct value.',
 };
 
 InputGroup.propTypes = {
@@ -40,6 +48,7 @@ InputGroup.propTypes = {
   validates: PropTypes.bool.isRequired,
   updateInput: PropTypes.func.isRequired,
   type: PropTypes.string,
+  errorText: PropTypes.string,
 };
 
 export default styled(InputGroup)`
