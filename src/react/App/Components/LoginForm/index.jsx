@@ -93,7 +93,7 @@ class LoginForm extends React.Component {
           errorText="Your password must be at least 8 characters."
         />
         <Button>Submit</Button>
-        <GlowLink margin="0 0 0 24px" href="/password-reset">I Want To Reset My Password</GlowLink>
+        <GlowLink margin="0 0 0 24px" href="/password-reset">I Forgot My Password</GlowLink>
       </form>
     );
   }
