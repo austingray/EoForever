@@ -4,6 +4,7 @@ const $fontUILabel = 'Spectral SC';
 const $fontUIInput = 'Spectral SC';
 const $fontUIButton = 'Spectral SC';
 const $fontUILink = 'Spectral SC';
+const $fontUIError = 'Spectral SC';
 
 module.exports = {
   $fontUIPrimary,
@@ -12,4 +13,5 @@ module.exports = {
   $fontUIInput,
   $fontUIButton,
   $fontUILink,
+  $fontUIError,
 };
