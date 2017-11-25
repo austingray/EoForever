@@ -1,12 +1,19 @@
 import React from 'react';
 import Template from '../../Components/Template';
+import ContentRow from '../../Components/ContentRow';
+import Heading from '../../Components/Heading';
 
-function Homepage() {
+function Login() {
   return (
     <Template>
-      <div>Homepage</div>
+      <ContentRow>
+        <Heading>Eo Forever</Heading>
+      </ContentRow>
+      <ContentRow>
+        Coming soon...
+      </ContentRow>
     </Template>
   );
 }
 
-export default Homepage;
+export default Login;
