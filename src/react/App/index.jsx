@@ -5,8 +5,9 @@ import { render } from 'react-dom';
 import {
   Homepage,
   Login,
-  Error,
   Register,
+  PasswordReset,
+  Error,
 } from './Views';
 
 const routes = [
@@ -24,6 +25,11 @@ const routes = [
     url: '/register',
     key: 'register',
     component: Register,
+  },
+  {
+    url: '/password-reset',
+    key: 'password-reset',
+    component: PasswordReset,
   },
 ];
 
