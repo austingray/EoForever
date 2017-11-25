@@ -1,4 +1,4 @@
-const template = (state, component) => /* @html */`
+const template = (state, styleTags, component) => /* @html */`
 <html>
   <head>
     <link rel="stylesheet" href="/build/css/style.css" />
@@ -6,6 +6,7 @@ const template = (state, component) => /* @html */`
     <script>
       var __STATE__ = ${JSON.stringify(state)};
     </script>
+    ${styleTags}
   </head>
 
   <body>
