@@ -8,6 +8,17 @@ A browser based online RPG.
 The client uses SSR React components and [styled-components](https://github.com/styled-components/styled-components). This project follows the [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react).
 
 ### Development
+
+This project uses Docker to run locally. The following environment variables are set in `docker-compose.yml`:
+
+```
+EO_SESSION_SECRET
+EO_DB_HOST,
+EO_DB_USER,
+EO_DB_PASSWORD,
+EO_DB_DATABASE,
+```
+
 - Install dependencies: `yarn`
 - Eslint is configured to use Airbnb style guide
 - Watch changes to assets: `yarn run watch`

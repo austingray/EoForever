@@ -11,10 +11,16 @@ services:
     depends_on:
       - postgres
     environment:
-      DATABASE_URL: postgres://uduser@postgres/uddb
+      NODE_ENV: development
+      EO_SESSION_SECRET: 'test'
+      EO_DB_HOST: postgres://uduser@postgres/uddb
+      EO_DB_USER: uduser
+      EO_DB_PASSWORD: udpass
+      EO_DB_DATABASE: uddb
     restart: on-failure
   postgres:
     image: postgres:9.6.2-alpine
     environment:
       POSTGRES_USER: uduser
+      POSTGRES_PASSWORD: udpass
       POSTGRES_DB: uddb

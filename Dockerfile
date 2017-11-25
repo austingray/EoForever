@@ -1,4 +1,9 @@
-FROM node:9-alpine
+FROM node:9
+
+# required for bcrypt
+RUN apt-get update
+RUN apt-get install -y build-essential
+RUN apt-get install -y python
 
 # Create app dir
 WORKDIR /usr/src/app
