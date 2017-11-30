@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import validator from 'validator';
 import InputTextGroup from '../InputTextGroup';
+import Form from '../Form';
 import Button from '../Button';
 
 class RegisterForm extends React.Component {
@@ -10,6 +11,7 @@ class RegisterForm extends React.Component {
     super(props);
 
     this.state = {
+      loading: false,
       email: {
         value: '',
         validates: true,
@@ -75,15 +77,26 @@ class RegisterForm extends React.Component {
   }
   submitForm() {
     if (this.validateForm()) {
+      // set global loading
+      window.__REAXPRESS_STATE__.update({
+        loading: true,
+      });
+
+      setTimeout(() => {
+        window.__REAXPRESS_STATE__.update({
+          loading: false,
+        });
+      }, 2000)
       // do submit
       console.log('submit');
     }
   }
   render() {
     return (
-      <form
+      <Form
         className={this.props.className}
         id="login-form"
+        loading={this.state.loading}
         onSubmit={(e) => {
           e.preventDefault();
           this.submitForm();
@@ -116,7 +129,7 @@ class RegisterForm extends React.Component {
           errorText="Your passwords must match."
         />
         <Button>Submit</Button>
-      </form>
+      </Form>
     );
   }
 }
@@ -126,6 +139,5 @@ RegisterForm.propTypes = {
 };
 
 export default styled(RegisterForm)`
-  width: 100%;
-  display: block;
+
 `;

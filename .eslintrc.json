@@ -4,6 +4,10 @@
     "browser": true
   },
   "rules": {
-    "react/prefer-stateless-function": "off"
-  }
+    "react/prefer-stateless-function": "off",
+    "no-underscore-dangle": "off",
+    "no-confusing-arrow": "off",
+    "no-unneeded-ternary": "off"
+  },
+  "parser": "babel-eslint"
 }

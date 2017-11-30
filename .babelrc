@@ -3,6 +3,7 @@
   "plugins": [
     ["styled-components", {
       "ssr": true
-    }]
+    }],
+    "transform-decorators-legacy"
   ]
 }

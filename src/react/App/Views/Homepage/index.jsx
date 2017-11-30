@@ -10,7 +10,7 @@ function Login() {
         <Heading>Eo Forever</Heading>
       </ContentRow>
       <ContentRow>
-        Coming soon...
+        In a world of warriors and barbarians... ...you get the idea... ...to be continued!
       </ContentRow>
     </Template>
   );
