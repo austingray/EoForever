@@ -82,13 +82,19 @@ class RegisterForm extends React.Component {
         loading: true,
       });
 
-      setTimeout(() => {
-        window.__REAXPRESS_STATE__.update({
-          loading: false,
-        });
-      }, 2000)
-      // do submit
-      console.log('submit');
+      // ajax submit registration
+      $.ajax({
+        type: 'POST',
+        url: '/users/register',
+        data: {
+          email: this.state.email.value,
+          password: this.state.email.password,
+          confirmPassword: this.state.email['confirm-password'],
+        },
+        success(response) {
+          console.log(response);
+        },
+      });
     }
   }
   render() {

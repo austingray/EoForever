@@ -35,6 +35,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./app.auth.js')();
 
+// define routes
+const users = require('./routes/users');
+// use routes
+app.use('/users', users);
+
 // use template.html on every route
 app.get('*', (req, res) => {
   // get the current url
